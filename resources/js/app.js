@@ -79,4 +79,22 @@ $(document).ready(function() {
     $options.on('click', function() {
         triggerSelected();
     });
+
+    // Tab Switching Logic for PROJECT SECTION
+    $('.tab-btn').on('click', function() {
+        const target = $(this).data('target');
+
+        // Update Buttons
+        $('.tab-btn').removeClass('active border-b-2 border-[var(--accent)]');
+        $(this).addClass('active border-b-2 border-[var(--accent)]');
+
+        // Update Content
+        $('.tab-content').hide();
+        $('#' + target).fadeIn(400);
+
+        console.log(`Accessing File: ${target}`);
+    });
+
+    // Hide all but the first one initially (in case CSS doesn't)
+    $('.tab-content:not(.active)').hide();
 });

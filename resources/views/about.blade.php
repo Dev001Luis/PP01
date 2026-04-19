@@ -52,6 +52,7 @@
                     <h2 class="text-[#FF5F45] mb-4 font-bold">// TECH_STACK</h2>
                     <ul class="space-y-2 opacity-80">
                         <li>> LARAVEL / PHP 8.3</li>
+                        <li>> FLASK / PYTHON 3</li>
                         <li>> JQUERY</li>
                         <li>> TAILWIND_CSS</li>
                         <li>> SQLITE / MYSQL</li>

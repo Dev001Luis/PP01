@@ -45,13 +45,11 @@
                     <span class="label">ABOUT_ME</span>
                     <span class="bracket">]</span>
                 </div>
-                {{-- https://callscribe-hm0l.onrender.com --}}
-                <div class="menu-option my-4 text-center" data-index="1">
-                    <a href="" class="nostyle" target="_blank">
-                        <span class="bracket">[</span>
-                        <span class="label">SOME_OF_MY_PROJECTS</span>
-                        <span class="bracket">]</span>
-                    </a>
+                <div class="menu-option my-4 text-center" data-index="1" data-url="/projects">
+                    <span class="bracket">[</span>
+                    <span class="label">SOME_OF_MY_PROJECTS</span>
+                    <span class="bracket">]</span>
+
                 </div>
                 <div class="menu-option my-4 text-center" data-index="2" data-url="/contact">
                     <span class="bracket">[</span>

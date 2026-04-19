@@ -107,7 +107,7 @@ body {
 }
 
 
-/* --- TACTICAL ID PORTRAIT SYSTEM --- */
+/* --- ID PORTRAIT SYSTEM --- */
 .tactical-id {
     --id-width: 14vw;      /* Control width here */
     --id-height: 20vh;    /* Control height here */
@@ -145,6 +145,44 @@ body {
     box-shadow: 0 0 15px var(--id-glow);
 }
 
+.screenshot_layout {
+    --id-width: 34vw;      /* Control width here */
+    --id-height: 45vh;    /* Control height here */
+    --id-glow: rgba(255, 95, 69, 0.3);
+    
+    position: relative;
+    width: var(--id-width);
+    height: var(--id-height);
+    display: inline-block;
+}
+
+/* The Border Frame */
+.screenshot_layout-frame {
+    position: absolute;
+    inset: -4px;
+    border: 1px solid var(--accent);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* The actual image */
+.screenshot_layout img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--ui-frame);
+    filter: grayscale(1) contrast(1.2) brightness(1.1);
+    transition: all 0.5s ease;
+}
+
+
+/* Theme-aware hover effect */
+.screenshot_layout:hover img {
+    filter: grayscale(0) contrast(1);
+    box-shadow: 0 0 15px var(--id-glow);
+}
+
 /* Corner Details */
 .id-corner {
     position: absolute;
@@ -170,4 +208,48 @@ body {
 /* Light Theme overrides (optional) */
 .light-theme .tactical-id {
     --id-glow: rgba(48, 56, 48, 0.2);
+}
+
+/* TAB PROJECT SECTION CSS */
+
+.tab-btn {
+    padding: 10px 20px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.tab-btn.active {
+    opacity: 1;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    background: rgba(255, 95, 69, 0.05);
+}
+
+.tab-btn:hover {
+    opacity: 1;
+}
+
+/* Hide scrollbar for tabs navigation */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Add a subtle fade-in effect */
+.tab-content {
+    animation: terminalFade 0.5s ease-out;
+}
+
+@keyframes terminalFade {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 0.7; transform: translateY(0); }
 }
