@@ -4,49 +4,92 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PP01 // ARCH_INTERFACE</title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
 </head>
 
-<body
-    class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-    <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-        @if (Route::has('login'))
-            <nav class="flex items-center justify-end gap-4">
-                @auth
-                    <a href="{{ url('/dashboard') }}"
-                        class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                        Dashboard
-                    </a>
-                @else
-                    <a href="{{ route('login') }}"
-                        class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal">
-                        Log in
-                    </a>
+<body>
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                            Register
-                        </a>
-                    @endif
-                @endauth
-            </nav>
-        @endif
-    </header>
-    <div>
-        Hello World!
+    <div id="particles-js"></div>
+
+    <div class="ui-overlay">
+        <div class="terminal-header mb-12 text-center">
+            <h1 class="text-xl tracking-[0.5em] text-[#DBCCB1]">SYSTEM: .//PP01_LUIS_STASI\'S_PORTFOLIO</h1>
+            <p class="text-[#DBCCB1] text-xs uppercase tracking-[0.3em] mb-6">Status: Neural Link Established</p>
+            <div class="h-[1px] w-64 bg-[#FF5F45] mx-auto mt-2 opacity-50"></div>
+        </div>
+
+        <nav id="game-menu" class="flex flex-col gap-4">
+            <div class="menu-option active" data-index="0" data-url="/about">
+                <span class="bracket">[</span>
+                <span class="label">INITIALIZE_BIO</span>
+                <span class="bracket">]</span>
+            </div>
+            <div class="menu-option" data-index="1" data-url="/projects">
+                <span class="bracket">[</span>
+                <span class="label">LOAD_PROJECTS</span>
+                <span class="bracket">]</span>
+            </div>
+            <div class="menu-option" data-index="2" data-url="/contact">
+                <span class="bracket">[</span>
+                <span class="label">ESTABLISH_UPLINK</span>
+                <span class="bracket">]</span>
+            </div>
+        </nav>
     </div>
 
-    @if (Route::has('login'))
-        <div class="h-14.5 hidden lg:block"></div>
-    @endif
-    <script src="{{ asset('js/particles.js') }}"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // Particle Config (The "Neural Brain" effect)
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#FF5F45"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5
+                },
+                "size": {
+                    "value": 2
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#DBCCB1",
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
