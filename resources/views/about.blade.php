@@ -34,6 +34,17 @@
                     <h2>ABOUT_LUIS_STASI</h2>
                     <p class="text-xs uppercase opacity-50">Role: Full-Stack Developer (Junior)</p>
                 </div>
+                <div class="profile-container mr-4">
+                    <div class="tactical-id">
+                        <div class="id-frame"></div>
+
+                        <img src="{{ asset('images/profile.jpg') }}" alt="LUIS_STASI">
+
+                        <div class="id-glitch-overlay"></div>
+                        <div class="id-corner top-left"></div>
+                        <div class="id-corner bottom-right"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -130,7 +141,8 @@
                                             <circle cx="5" cy="6" r="3" fill="var(--text-primary)" />
                                             <text x="15" y="10" class="lang-name">Python 21.22%</text>
                                         </g>
-                                        <g transform="translate(0, 40)" class="stagger" style="animation-delay: 750ms">
+                                        <g transform="translate(0, 40)" class="stagger"
+                                            style="animation-delay: 750ms">
                                             <circle cx="5" cy="6" r="3" fill="var(--accent)"
                                                 opacity="0.5" />
                                             <text x="15" y="10" class="lang-name">Vue 13.42%</text>
@@ -158,9 +170,11 @@
                     <p class="text-sm leading-relaxed">
                     <ul>
                         <li> Software Engineer at Max Mara Fashion Group:</li>
-                        <li> Developed and maintained internal software solutions supporting ERP and PLM systems across
+                        <li> Developed and maintained internal software solutions supporting ERP and PLM systems
+                            across
                             group subsidiaries.</li>
-                        <li> Provided secondary-level support for daily business operations, resolving user requests and
+                        <li> Provided secondary-level support for daily business operations, resolving user requests
+                            and
                             technical issues related to ERP/PLM services. </li>
                         <li>Collaborated with cross-functional teams using tools like Figma and Git to streamline
                             development processes.</li>

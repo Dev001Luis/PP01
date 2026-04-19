@@ -45,16 +45,17 @@
                     <span class="label">ABOUT_ME</span>
                     <span class="bracket">]</span>
                 </div>
+                {{-- https://callscribe-hm0l.onrender.com --}}
                 <div class="menu-option my-4 text-center" data-index="1">
-                    <a href="https://github.com/Dev001Luis" class="nostyle" target="_blank">
+                    <a href="" class="nostyle" target="_blank">
                         <span class="bracket">[</span>
-                        <span class="label">GO_TO_REPO_PROJECTS</span>
+                        <span class="label">SOME_OF_MY_PROJECTS</span>
                         <span class="bracket">]</span>
                     </a>
                 </div>
                 <div class="menu-option my-4 text-center" data-index="2" data-url="/contact">
                     <span class="bracket">[</span>
-                    <span class="label">CONTACTS_UPLINK</span>
+                    <span class="label">CONTACTS_AND_REPO</span>
                     <span class="bracket">]</span>
                 </div>
                 <!--<div class="menu-option text-center" data-index="3" data-url="/game">
