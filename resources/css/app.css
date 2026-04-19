@@ -1,11 +1,45 @@
-@import 'tailwindcss';
+/* @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
+@source '../../storage/framework/views/*.php';*/
+@source '..*.blade.php';
 @source '../**/*.js';
 
-@theme {
+/*@theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+} */
+
+:root {
+    --bg-dark: #303830;
+    --text-cream: #F4EED3;
+    --accent-coral: #FF5F45;
+    --muted-tan: #DBCCB1;
+    --hacker-glow: rgba(255, 95, 69, 0.3);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-cream);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Minimal Side Menu Panel */
+#side-menu {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(48, 56, 48, 0.95);
+    border-left: 1px solid var(--accent-coral);
+    z-index: 1000;
+    transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#side-menu.active {
+    right: 0;
+    box-shadow: -10px 0 20px var(--hacker-glow);
 }
