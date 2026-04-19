@@ -16,31 +16,43 @@
 <body>
 
     <div id="particles-js"></div>
-
+    <!--WHAT ARE YOU DOING STEP-BRO/SIS ...DON'T BREAK MY PAGE PLS.-->
     <div class="ui-overlay">
-        <div class="terminal-header mb-12 text-center">
-            <h1 class="text-xl tracking-[0.5em] text-[#DBCCB1]">SYSTEM: .//PP01_LUIS_STASI\'S_PORTFOLIO</h1>
-            <p class="text-[#DBCCB1] text-xs uppercase tracking-[0.3em] mb-6">Status: Neural Link Established</p>
-            <div class="h-[1px] w-64 bg-[#FF5F45] mx-auto mt-2 opacity-50"></div>
+        <div class="mt-8 mb-8 text-[10px] opacity-50">
+            PRESS [T] TO TOGGLE LIGHT/DARK MODE
         </div>
+        <div class="hacker-frame">
+            <div class="terminal-header mb-8 text-center">
+                <h1 class="text-l  ">.//PP01_LUIS_STASI_PORTFOLIO</h1>
+                <p class=" text-xs uppercase tracking-[0.3em] mb-6">Status: Link Established</p>
+                <div class="h-[1px] w-64 bg-[#FF5F45] mx-auto mt-2 opacity-50"></div>
+            </div>
 
-        <nav id="game-menu" class="flex flex-col gap-4">
-            <div class="menu-option active" data-index="0" data-url="/about">
-                <span class="bracket">[</span>
-                <span class="label">INITIALIZE_BIO</span>
-                <span class="bracket">]</span>
-            </div>
-            <div class="menu-option" data-index="1" data-url="/projects">
-                <span class="bracket">[</span>
-                <span class="label">LOAD_PROJECTS</span>
-                <span class="bracket">]</span>
-            </div>
-            <div class="menu-option" data-index="2" data-url="/contact">
-                <span class="bracket">[</span>
-                <span class="label">ESTABLISH_UPLINK</span>
-                <span class="bracket">]</span>
-            </div>
-        </nav>
+            <nav id="game-menu" class="flex flex-col gap-4">
+                <div class="menu-option my-4 active text-center" data-index="0" data-url="/about">
+                    <span class="bracket">[</span>
+                    <span class="label">ABOUT_ME</span>
+                    <span class="bracket">]</span>
+                </div>
+                <div class="menu-option my-4 text-center" data-index="1">
+                    <a href="https://github.com/Dev001Luis" class="nostyle" target="_blank">
+                        <span class="bracket">[</span>
+                        <span class="label">GO_TO_REPO_PROJECTS</span>
+                        <span class="bracket">]</span>
+                    </a>
+                </div>
+                <div class="menu-option my-4 text-center" data-index="2" data-url="/contact">
+                    <span class="bracket">[</span>
+                    <span class="label">CONTACTS_UPLINK</span>
+                    <span class="bracket">]</span>
+                </div>
+                <!--<div class="menu-option text-center" data-index="3" data-url="/game">
+                    <span class="bracket">[</span>
+                    <span class="label">LET'S_HAVE_FUN</span>
+                    <span class="bracket">]</span>
+                </div>-->
+            </nav>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -81,10 +93,27 @@
                 }
             },
             "interactivity": {
+                "detect_on": "window",
                 "events": {
                     "onhover": {
                         "enable": true,
                         "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
                     }
                 }
             }

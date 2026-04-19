@@ -18,13 +18,14 @@ class PortfolioController extends Controller
     /**
      * Handle AJAX Contact Requests.
      */
-    public function contact(Request $request)
+
+    public function about()
     {
-        // For now, we just return a success signal.
-        // Later, we can add Mail or DB logic here.
-        return response()->json([
-            'status' => 'success',
-            'message' => 'UPLINK_ESTABLISHED: Message received by PP01.'
-        ]);
+        return view('about');
+    }
+
+    public function contactPage()
+    {
+        return view('contact');
     }
 }
