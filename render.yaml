@@ -2,7 +2,6 @@ services:
   - type: web
     name: luis-portfolio
     plan: free
-    region: frankfurt
     env: php
     buildCommand: |
       composer install --no-dev --optimize-autoloader
