@@ -1,7 +1,7 @@
 services:
   - type: web
     name: luis-portfolio
-    runtime: web
+    env: php
     plan: free
     region: frankfurt
     env: php
