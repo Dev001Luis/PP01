@@ -2,12 +2,7 @@ services:
   - type: web
     name: luis-portfolio
     plan: free
-    env: php
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      npm install && npm run build
-      php artisan optimize
-    startCommand: vendor/bin/heroku-php-apache2 public/
+    env: docker
     envVars:
       - key: APP_ENV
         value: production
@@ -17,7 +12,5 @@ services:
         value: stderr
       - key: SESSION_DRIVER
         value: file
-      - key: CACHE_STORE
-        value: file
       - key: APP_KEY
-        generateValue: true # This tells Render to create a secure key for you automatically
+        generateValue: true
