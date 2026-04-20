@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: luis-portfolio-node
-    env: php
+    name: luis-portfolio
+    runtime: web
     plan: free
-    region: frankfurt # Or your preferred region
+    region: frankfurt
+    env: php
     buildCommand: |
       composer install --no-dev --optimize-autoloader
       npm install && npm run build
@@ -21,4 +22,4 @@ services:
       - key: CACHE_STORE
         value: file
       - key: APP_KEY
-        fromValue: ${APP_KEY} # You will generate this in the Render Dashboard
+        generateValue: true # This tells Render to create a secure key for you automatically
