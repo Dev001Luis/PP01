@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: luis-portfolio
+    name: luis-portfolio-node
     env: php
     plan: free
+    region: frankfurt # Or your preferred region
     buildCommand: |
       composer install --no-dev --optimize-autoloader
       npm install && npm run build
@@ -15,5 +16,9 @@ services:
         value: false
       - key: LOG_CHANNEL
         value: stderr
+      - key: SESSION_DRIVER
+        value: file
+      - key: CACHE_STORE
+        value: file
       - key: APP_KEY
-        fromValue: ${APP_KEY} # You'll set this in the dashboard
+        fromValue: ${APP_KEY} # You will generate this in the Render Dashboard
